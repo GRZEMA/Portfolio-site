@@ -8,6 +8,7 @@ import {
 import DesktopNav from '@/components/Navigation/DesktopNav'
 import MobileNav from '@/components/Navigation/MobileNav'
 import Navigation from './Navigation'
+import Footer from '@/components/Footer/Footer'
 
 const roboto_condensed = Roboto_Condensed({
 	subsets: ['latin'],
@@ -19,7 +20,7 @@ const roboto_condensed = Roboto_Condensed({
 const cormorant_garmond = Cormorant_Garamond({
 	subsets: ['latin'],
 	display: 'swap',
-	weight: '700',
+	weight: ['700', '400'],
 	variable: '--font-cormorant-garmond',
 })
 const dancing_script = Dancing_Script({
@@ -46,6 +47,7 @@ export default function RootLayout({
 			<body className='font-roboto overflow-hidden max-w-full'>
 				<Navigation />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	)
