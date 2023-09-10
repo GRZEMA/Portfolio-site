@@ -6,9 +6,13 @@ import React from 'react'
 
 interface MobileNavProps {
 	closeNav: () => void
+	scrollHandler: () => void
 }
 
-const MobileNav = ({ closeNav }: MobileNavProps): JSX.Element => {
+const MobileNav = ({
+	closeNav,
+	scrollHandler,
+}: MobileNavProps): JSX.Element => {
 	const liClasses =
 		'hover:text-customYellow transition-colors duration-300 before:content-[""] relative before:absolute before:w-1 before:h-0 before:-left-4 hover:before:h-full before:bg-customYellow before:transition-height before:bottom-1/2 before:translate-y-1/2'
 
@@ -17,7 +21,7 @@ const MobileNav = ({ closeNav }: MobileNavProps): JSX.Element => {
 	) => {
 		const target = e.target as HTMLElement
 
-		if (target.tagName === 'A') {
+		if (target.tagName === 'A' || target.tagName === 'BUTTON') {
 			closeNav()
 		}
 		return
@@ -35,7 +39,7 @@ const MobileNav = ({ closeNav }: MobileNavProps): JSX.Element => {
 					<Link href='/'>Home</Link>
 				</li>
 				<li className={liClasses}>
-					<Link href='#about'>About</Link>
+					<button onClick={scrollHandler}>About</button>
 				</li>
 				<li className={liClasses}>
 					<Link href='/portfolio'>Portfolio</Link>
