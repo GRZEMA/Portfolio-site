@@ -13,7 +13,7 @@ import Footer from '@/components/Footer/Footer'
 const roboto_condensed = Roboto_Condensed({
 	subsets: ['latin'],
 	display: 'swap',
-	weight: '300',
+	weight: ['300', '400', '700'],
 	variable: '--font-roboto-condensed',
 })
 
@@ -43,8 +43,8 @@ export default function RootLayout({
 	return (
 		<html
 			lang='en'
-			className={`${roboto_condensed.variable} ${dancing_script.variable} ${cormorant_garmond.variable}`}>
-			<body className='font-roboto overflow-hidden max-w-full'>
+			className={`${roboto_condensed.variable} ${dancing_script.variable} ${cormorant_garmond.variable} scroll-smooth`}>
+			<body className='font-roboto font-extralight max-w-full bg-background'>
 				<Navigation />
 				{children}
 				<Footer />

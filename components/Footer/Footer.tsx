@@ -6,7 +6,7 @@ import TextWithSquares from '../UI/TextWithSquares'
 
 const Footer = (): JSX.Element => {
 	return (
-		<footer className='w-full border-t-[3px] md:border-t-[5px] border-customYellow relative bg-background mt-5'>
+		<footer className='w-full border-t-[3px] md:border-t-[5px] border-customYellow relative bg-background'>
 			<Socials />
 			<div className='container max-w-prose w-full flex flex-col items-center justify-center text-xl sm:text-2xl lg:text-3xl text-center mt-10 space-y-4 pb-5 pr-5 pl-5'>
 				<p>
