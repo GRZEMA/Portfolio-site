@@ -3,12 +3,17 @@
 import Link from 'next/link'
 import Socials from './Socials'
 import TextWithSquares from '../UI/TextWithSquares'
+import { motion } from 'framer-motion'
 
 const Footer = (): JSX.Element => {
 	return (
 		<footer className='w-full border-t-[3px] md:border-t-[5px] border-customYellow relative bg-background'>
 			<Socials />
-			<div className='container max-w-prose w-full flex flex-col items-center justify-center text-xl sm:text-2xl lg:text-3xl text-center mt-10 space-y-4 pb-5 pr-5 pl-5'>
+			<motion.div
+				initial={{ opacity: 0 }}
+				whileInView={{ opacity: 1 }}
+				viewport={{ once: true, margin: '-100px' }}
+				className='container max-w-prose w-full flex flex-col items-center justify-center text-xl sm:text-2xl lg:text-3xl text-center mt-10 space-y-4 pb-5 pr-5 pl-5'>
 				<p>
 					Feel free to contact me via my socials or{' '}
 					<span className='text-customYellow font-bold'>
@@ -28,7 +33,7 @@ const Footer = (): JSX.Element => {
 					<span>Thanks for scrolling and</span>
 					<span className='uppercase font-bold'>have a nice day!</span>
 				</TextWithSquares>
-			</div>
+			</motion.div>
 		</footer>
 	)
 }

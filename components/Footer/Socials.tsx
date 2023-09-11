@@ -1,21 +1,80 @@
-import Image from 'next/image'
+import {
+	faFacebook,
+	faWhatsapp,
+	faTwitter,
+	faLinkedin,
+} from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 const Socials = (): JSX.Element => {
 	const socialClasses = 'Social relative w-10 h-10 sm:w-12 sm:h-12'
 	return (
 		<div className='flex gap-4 sm:gap-8 bg-background p-4 sm:pl-8 sm:pr-8 absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2'>
-			<div className={socialClasses}>
-				<Image src='./assets/facebook.svg' alt='' fill />
-			</div>
-			<div className={socialClasses}>
-				<Image src='./assets/twitter.svg' alt='' fill />
-			</div>
-			<div className={socialClasses}>
-				<Image src='./assets/linkedin-in.svg' alt='' fill />
-			</div>
-			<div className={socialClasses}>
-				<Image src='./assets/whatsapp.svg' alt='' fill />
-			</div>
+			<motion.div
+				initial={{ y: 50, opacity: 0 }}
+				whileInView={{ y: 0, opacity: 1 }}
+				viewport={{ once: true }}>
+				<Link
+					className={socialClasses}
+					href='https://www.facebook.com/dawid.krzeminski.355/'
+					target='_blank'>
+					<FontAwesomeIcon
+						icon={faFacebook}
+						size='3x'
+						className='text-text hover:text-customYellow transition-all hover:scale-105 duration-300'
+					/>
+				</Link>
+			</motion.div>
+			<motion.div
+				initial={{ y: 50, opacity: 0 }}
+				whileInView={{ y: 0, opacity: 1 }}
+				transition={{ delay: 0.05 }}
+				viewport={{ once: true }}>
+				<Link
+					className={socialClasses}
+					href='https://twitter.com/GRZEMAA'
+					target='_blank'>
+					<FontAwesomeIcon
+						icon={faTwitter}
+						size='3x'
+						className='text-text hover:text-customYellow transition-all hover:scale-105 duration-300'
+					/>
+				</Link>
+			</motion.div>
+			<motion.div
+				initial={{ y: 50, opacity: 0 }}
+				whileInView={{ y: 0, opacity: 1 }}
+				transition={{ delay: 0.1 }}
+				viewport={{ once: true }}>
+				<Link
+					className={socialClasses}
+					href='https://www.linkedin.com/in/dawid-krzemi%C5%84ski-108961209/'
+					target='_blank'>
+					<FontAwesomeIcon
+						icon={faLinkedin}
+						size='3x'
+						className='text-text hover:text-customYellow transition-all hover:scale-105 duration-300'
+					/>
+				</Link>
+			</motion.div>
+			<motion.div
+				initial={{ y: 50, opacity: 0 }}
+				whileInView={{ y: 0, opacity: 1 }}
+				transition={{ delay: 0.15 }}
+				viewport={{ once: true }}>
+				<Link
+					className={socialClasses}
+					href='https://wa.link/wb9y7h'
+					target='_blank'>
+					<FontAwesomeIcon
+						icon={faWhatsapp}
+						size='3x'
+						className='text-text hover:text-customYellow transition-all hover:scale-105 duration-300'
+					/>
+				</Link>
+			</motion.div>
 		</div>
 	)
 }

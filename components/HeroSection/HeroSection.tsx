@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import Button from '../UI/Button'
+import { motion } from 'framer-motion'
 
 const HeroSection = (): JSX.Element => {
 	const scrollHandler = () => {
@@ -19,7 +20,10 @@ const HeroSection = (): JSX.Element => {
 						fill
 					/>
 				</div>
-				<div className='welcome flex flex-col mt-6 text-xl lg:text-3xl xl:text-4xl 2xl:text-5xl justify-around h-full items-center lg:h-4/5 lg:items-center lg:w-1/2 xl:justify-around xl:pb-12 pr-4 pl-4 xl:w-full'>
+				<motion.div
+					className='welcome flex flex-col mt-6 text-xl lg:text-3xl xl:text-4xl 2xl:text-5xl justify-around h-full items-center lg:h-4/5 lg:items-center lg:w-1/2 xl:justify-around xl:pb-12 pr-4 pl-4 xl:w-full'
+					initial={{ opacity: 0, y: 100 }}
+					animate={{ opacity: 1, y: 0 }}>
 					<div className='text-box flex flex-col space-y-6 lg:space-y-10 text-center'>
 						<h1>
 							I&apos;M{' '}
@@ -36,7 +40,7 @@ const HeroSection = (): JSX.Element => {
 					<Button size='2xl' action={scrollHandler}>
 						Let&apos;s get acquainted!
 					</Button>
-				</div>
+				</motion.div>
 			</div>
 		</section>
 	)
