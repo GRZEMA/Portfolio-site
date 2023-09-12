@@ -6,13 +6,9 @@ import React from 'react'
 
 interface MobileNavProps {
 	closeNav: () => void
-	scrollHandler: () => void
 }
 
-const MobileNav = ({
-	closeNav,
-	scrollHandler,
-}: MobileNavProps): JSX.Element => {
+const MobileNav = ({ closeNav }: MobileNavProps): JSX.Element => {
 	const liClasses =
 		'hover:text-customYellow transition-colors duration-300 before:content-[""] relative before:absolute before:w-1 before:h-0 before:-left-4 hover:before:h-full before:bg-customYellow before:transition-height before:bottom-1/2 before:translate-y-1/2'
 
@@ -39,7 +35,7 @@ const MobileNav = ({
 					<Link href='/'>Home</Link>
 				</li>
 				<li className={liClasses}>
-					<button onClick={scrollHandler}>About</button>
+					<Link href='/#about'>About</Link>
 				</li>
 				<li className={liClasses}>
 					<Link href='/portfolio'>Portfolio</Link>

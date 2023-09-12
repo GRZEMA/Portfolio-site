@@ -5,13 +5,9 @@ import Link from 'next/link'
 
 interface DesktopNavProps {
 	openNav: () => void
-	scrollHandler: () => void
 }
 
-const DesktopNav = ({
-	openNav,
-	scrollHandler,
-}: DesktopNavProps): JSX.Element => {
+const DesktopNav = ({ openNav }: DesktopNavProps): JSX.Element => {
 	return (
 		<div className='nav p-6 w-full flex items-center justify-between'>
 			<Logo />
@@ -20,7 +16,7 @@ const DesktopNav = ({
 					<Link href='/'>Home</Link>
 				</li>
 				<li className='hover:text-customYellow transition-colors duration-300'>
-					<button onClick={scrollHandler}>About</button>
+					<Link href='/#about'>About</Link>
 				</li>
 				<li className='hover:text-customYellow transition-colors duration-300'>
 					<Link href='/portfolio'>Portfolio</Link>

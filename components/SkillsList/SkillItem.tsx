@@ -11,7 +11,7 @@ const SkillItem = ({ images, name }: SkillItemProps): JSX.Element => {
 		<motion.li
 			initial={{ opacity: 0, scale: 0.7 }}
 			whileInView={{ opacity: 1, scale: 1 }}
-			viewport={{ once: true, margin: '-150px' }}
+			viewport={{ once: true, margin: '-50px' }}
 			className='flex flex-col items-center justify-center bg-customGray w-[100px] h-[100px] rounded-xl sm:w-[130px] sm:h-[130px] md:p-2 lg:w-[180px] lg:h-[180px] xl:w-[220px] xl:h-[220px] 2xl:w-[250px] 2xl:h-[250px] hover:bg-lightGray transition-colors duration-300'>
 			{images !== null ? (
 				images.length > 1 ? (

@@ -22,8 +22,7 @@ const Socials = (): JSX.Element => {
 					target='_blank'>
 					<FontAwesomeIcon
 						icon={faFacebook}
-						size='3x'
-						className='text-text hover:text-customYellow transition-all hover:scale-105 duration-300'
+						className='text-text text-4xl md:text-5xl hover:text-customYellow transition-all hover:scale-105 duration-300'
 					/>
 				</Link>
 			</motion.div>
@@ -38,8 +37,7 @@ const Socials = (): JSX.Element => {
 					target='_blank'>
 					<FontAwesomeIcon
 						icon={faTwitter}
-						size='3x'
-						className='text-text hover:text-customYellow transition-all hover:scale-105 duration-300'
+						className='text-text text-4xl md:text-5xl hover:text-customYellow transition-all hover:scale-105 duration-300'
 					/>
 				</Link>
 			</motion.div>
@@ -54,8 +52,7 @@ const Socials = (): JSX.Element => {
 					target='_blank'>
 					<FontAwesomeIcon
 						icon={faLinkedin}
-						size='3x'
-						className='text-text hover:text-customYellow transition-all hover:scale-105 duration-300'
+						className='text-text text-4xl md:text-5xl hover:text-customYellow transition-all hover:scale-105 duration-300'
 					/>
 				</Link>
 			</motion.div>
@@ -70,8 +67,7 @@ const Socials = (): JSX.Element => {
 					target='_blank'>
 					<FontAwesomeIcon
 						icon={faWhatsapp}
-						size='3x'
-						className='text-text hover:text-customYellow transition-all hover:scale-105 duration-300'
+						className='text-text text-4xl md:text-5xl hover:text-customYellow transition-all hover:scale-105 duration-300'
 					/>
 				</Link>
 			</motion.div>
