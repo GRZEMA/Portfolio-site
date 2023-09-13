@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import Logo from '../Logo/Logo'
 import Link from 'next/link'
+import ProgressBar from './ProgressBar'
 
 interface DesktopNavProps {
 	openNav: () => void

@@ -3,12 +3,10 @@
 import DesktopNav from '@/components/Navigation/DesktopNav'
 import MobileNav from '@/components/Navigation/MobileNav'
 import { AnimatePresence } from 'framer-motion'
-import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 
 const Navigation = (): JSX.Element => {
 	const [isMobileOpen, setIsMobileOpen] = useState(false)
-	const router = useRouter()
 
 	const openNav = () => {
 		setIsMobileOpen(true)

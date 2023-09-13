@@ -53,7 +53,11 @@ const projects: ProjectModel[] = [
 const PortfolioPage = (): JSX.Element => {
 	return (
 		<main className='pb-5 bg-background lg:pb-10'>
-			<HeroSection title='Portoflio' imageUrl='/assets/portfolioBg.jpg' />
+			<HeroSection
+				title='Portoflio'
+				imageUrl='/assets/portfolioBg.jpg'
+				linkId={projects[0].id}
+			/>
 			{projects.map((project) => (
 				<ProjectSection project={project} key={project.name} />
 			))}

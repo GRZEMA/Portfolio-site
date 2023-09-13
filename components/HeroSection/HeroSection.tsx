@@ -5,9 +5,14 @@ import Button from '../UI/Button'
 interface HeroSectionProps {
 	title: string
 	imageUrl: string
+	linkId: string
 }
 
-const HeroSection = ({ imageUrl, title }: HeroSectionProps): JSX.Element => {
+const HeroSection = ({
+	imageUrl,
+	title,
+	linkId,
+}: HeroSectionProps): JSX.Element => {
 	return (
 		<section className='h-screen w-full bg-background pt-20 sm:pt-24 lg:pt-0 max-w-[1920px] relative flex items-center justify-center flex-col'>
 			<Image
@@ -25,6 +30,12 @@ const HeroSection = ({ imageUrl, title }: HeroSectionProps): JSX.Element => {
 					{title}
 				</h1>
 			</motion.div>
+			<Button
+				size='2xl'
+				href={`#${linkId}`}
+				customClasses='!absolute bottom-[4rem] animate-bounce'>
+				Explore!
+			</Button>
 		</section>
 	)
 }

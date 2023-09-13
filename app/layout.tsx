@@ -5,10 +5,9 @@ import {
 	Cormorant_Garamond,
 	Dancing_Script,
 } from 'next/font/google'
-import DesktopNav from '@/components/Navigation/DesktopNav'
-import MobileNav from '@/components/Navigation/MobileNav'
 import Navigation from './Navigation'
 import Footer from '@/components/Footer/Footer'
+import NextTopLoader from 'nextjs-toploader'
 
 const roboto_condensed = Roboto_Condensed({
 	subsets: ['latin'],
@@ -46,6 +45,7 @@ export default function RootLayout({
 			className={`${roboto_condensed.variable} ${dancing_script.variable} ${cormorant_garmond.variable} scroll-smooth`}>
 			<body className='font-roboto font-extralight max-w-full bg-background'>
 				<Navigation />
+				<NextTopLoader color='#FAE69E' showSpinner={false} />
 				{children}
 				<Footer />
 			</body>
