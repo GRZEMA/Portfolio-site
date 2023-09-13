@@ -6,8 +6,8 @@ import ProjectSection from '@/components/ProjectList/ProjectSection'
 export interface ProjectModel {
 	name: string
 	quickDescription: string
-	featuresList: string[]
-	stackList: string[]
+	featuresList: { text: string }[]
+	stackList: { text: string }[]
 	liveUrl: string
 	githubUrl: string
 	imagesUrl: string[]
@@ -21,18 +21,18 @@ const projects: ProjectModel[] = [
 		quickDescription:
 			"meetYaa Events is a web application built with Next.js and TypeScript for managing and organizing events. This platform allows users to create events, register attendees, signup for events, and more. It's a comprehensive solution for event organizers and attendees alike.",
 		featuresList: [
-			'User authentication and profiles',
-			'Event creation with customizable details',
-			'Event registration and ticket purchase',
-			'Event search and filtering',
-			"Organizers' event management possibility",
+			{ text: 'User authentication and profiles' },
+			{ text: 'Event creation with customizable details' },
+			{ text: 'Event registration and ticket purchase' },
+			{ text: 'Event search and filtering' },
+			{ text: "Organizers' event management possibility" },
 		],
 		stackList: [
-			'Next.js: Server-side rendering, routing, and API integration',
-			'TypeScript: Enhanced type safety and readability',
-			'SCSS modules: Efficient and responsive styling',
-			'Database: Store user and event data (MongoDB)',
-			'Next-Auth: sign-up, log-in, and profile management',
+			{ text: 'Next.js: Server-side rendering, routing, and API integration' },
+			{ text: 'TypeScript: Enhanced type safety and readability' },
+			{ text: 'SCSS modules: Efficient and responsive styling' },
+			{ text: 'Database: Store user and event data (MongoDB)' },
+			{ text: 'Next-Auth: sign-up, log-in, and profile management' },
 		],
 		liveUrl: 'https://meet-yaa-project.vercel.app/',
 		githubUrl: 'https://github.com/GRZEMA/meetYaa-project',

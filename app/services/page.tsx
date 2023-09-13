@@ -1,7 +1,9 @@
 'use client'
 
+import ContactMeSection from '@/components/ContactMeSection/ContactMeSection'
 import HeroSection from '@/components/HeroSection/HeroSection'
 import OfferSection from '@/components/OfferSection/OfferSection'
+import WhyMeSection from '@/components/WhyMeSection/WhyMeSection'
 
 const ServicesPage = () => {
 	return (
@@ -12,6 +14,8 @@ const ServicesPage = () => {
 				linkId='offer'
 			/>
 			<OfferSection />
+			<WhyMeSection />
+			<ContactMeSection />
 		</main>
 	)
 }

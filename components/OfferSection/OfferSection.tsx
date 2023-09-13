@@ -1,5 +1,6 @@
 import SectionHeading from '@/components/UI/SectionHeading'
 import OfferImagesList from './OfferImagesList'
+import TextWithSquares from '../UI/TextWithSquares'
 
 const imagesData = [
 	{
@@ -46,6 +47,10 @@ const OfferSection = (): JSX.Element => {
 			<SectionHeading id='offer'>Offer</SectionHeading>
 			<div className='container max-w-[1400px] flex flex-col items-center pt-12 md:pt-20 space-y-6 md:space-y-8 lg:space-y-10 px-4 pl-8 pb-6 text-text'>
 				<OfferImagesList imagesData={imagesData} />
+				<TextWithSquares classnames='font-dancing text-xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl max-w-[80%] md:max-w-[60%]'>
+					At the heart of every successful project is the right collaborator.
+					Here&apos;s why I stand out
+				</TextWithSquares>
 			</div>
 		</section>
 	)
