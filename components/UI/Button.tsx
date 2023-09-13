@@ -31,7 +31,7 @@ const Button = ({
 				href={href}
 				className={
 					classes +
-					' bg-customYellow max-w-fit text-background w-full xl:justify-self-end before:content-[""] after:content-[""] before:w-full after:w-full before:h-1/2 after:h-1/2 before:absolute after:absolute before:top-0 after:bottom-0 before:bg-[#C6AF60] after:bg-[#C6AF60] before:left-full after:right-full overflow-hidden relative hover:before:-translate-x-full hover:after:translate-x-full before:transition-transform after:transition-transform before:duration-500 after:duration-500 ' +
+					' bg-customYellow max-w-fit text-background w-full xl:justify-self-end before:content-[""] after:content-[""] before:w-[120%] after:w-[120%] before:h-1/2 after:h-1/2 before:absolute after:absolute before:top-0 after:bottom-0 before:bg-[#C6AF60] after:bg-[#C6AF60] before:left-full after:right-full overflow-hidden relative hover:before:-translate-x-full hover:after:translate-x-full before:transition-transform after:transition-transform before:duration-500 after:duration-500 ' +
 					customClasses
 				}>
 				<span className='z-10 relative'>{children}</span>
