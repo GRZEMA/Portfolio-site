@@ -21,6 +21,7 @@ const HeroSection = ({
 				fill
 				style={{ objectFit: 'cover' }}
 				quality={100}
+				loading='eager'
 			/>
 			<motion.div
 				initial={{ opacity: 0, y: 100 }}

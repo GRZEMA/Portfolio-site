@@ -13,6 +13,7 @@ const WelcomeSection = (): JSX.Element => {
 						src='/assets/image-of-me.webp'
 						alt='Image of Dawid Krzemiński'
 						fill
+						loading='eager'
 					/>
 				</div>
 				<motion.div
@@ -32,7 +33,7 @@ const WelcomeSection = (): JSX.Element => {
 							Experiences Through Code
 						</p>
 					</div>
-					<Button size='2xl' href='#about'>
+					<Button size='2xl' href='#about' customClasses='animate-bounce'>
 						Let&apos;s get acquainted!
 					</Button>
 				</motion.div>
