@@ -1,3 +1,5 @@
+'use client'
+
 import AnimatedParagraph from '../UI/AnimatedParagraph'
 import Button from '../UI/Button'
 import TextWithSquares from '../UI/TextWithSquares'

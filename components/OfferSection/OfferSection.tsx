@@ -1,3 +1,5 @@
+'use client'
+
 import SectionHeading from '@/components/UI/SectionHeading'
 import OfferImagesList from './OfferImagesList'
 import TextWithSquares from '../UI/TextWithSquares'

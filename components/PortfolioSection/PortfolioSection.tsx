@@ -1,3 +1,5 @@
+'use client'
+
 import PortfolioList from '../PortfolioList/PortfolioList'
 import SectionHeading from '../UI/SectionHeading'
 

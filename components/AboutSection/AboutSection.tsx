@@ -1,9 +1,10 @@
+'use client'
+
 import SkillsList from '../SkillsList/SkillsList'
 import AnimatedParagraph from '../UI/AnimatedParagraph'
 import SectionHeading from '../UI/SectionHeading'
 import SectionSubHeading from '../UI/SectionSubHeading'
 import TextWithSquares from '../UI/TextWithSquares'
-import { motion } from 'framer-motion'
 
 const AboutSection = (): JSX.Element => {
 	return (

@@ -1,7 +1,6 @@
-'use client'
-
 import HeroSection from '@/components/HeroSection/HeroSection'
 import ProjectSection from '@/components/ProjectList/ProjectSection'
+import { Metadata } from 'next'
 
 export interface ProjectModel {
 	name: string
@@ -12,6 +11,12 @@ export interface ProjectModel {
 	githubUrl: string
 	imagesUrl: string[]
 	id: string
+}
+
+export const metadata: Metadata = {
+	title: "Dawid Krzemiński's Portfolio | Frontend Developer's Showcase",
+	description:
+		"Explore Dawid Krzemiński's portfolio, featuring a collection of stunning frontend development projects. Discover the skills and creativity behind each creation.",
 }
 
 const projects: ProjectModel[] = [
@@ -52,27 +57,16 @@ const projects: ProjectModel[] = [
 
 const PortfolioPage = (): JSX.Element => {
 	return (
-		<>
-			<head>
-				<title>
-					Dawid Krzemiński&apos;s Portfolio | Frontend Developer&apos;s Showcase
-				</title>
-				<meta
-					name='description'
-					content="Explore Dawid Krzemiński's portfolio, featuring a collection of stunning frontend development projects. Discover the skills and creativity behind each creation."
-				/>
-			</head>
-			<main className='pb-5 bg-background lg:pb-10'>
-				<HeroSection
-					title='Portoflio'
-					imageUrl='/assets/portfolioBg.jpg'
-					linkId={projects[0].id}
-				/>
-				{projects.map((project) => (
-					<ProjectSection project={project} key={project.name} />
-				))}
-			</main>
-		</>
+		<main className='pb-5 bg-background lg:pb-10'>
+			<HeroSection
+				title='Portoflio'
+				imageUrl='/assets/portfolioBg.jpg'
+				linkId={projects[0].id}
+			/>
+			{projects.map((project) => (
+				<ProjectSection project={project} key={project.name} />
+			))}
+		</main>
 	)
 }
 

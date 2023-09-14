@@ -1,3 +1,5 @@
+'use client'
+
 import SectionHeading from '../UI/SectionHeading'
 import SectionSubHeading from '../UI/SectionSubHeading'
 import { ProjectModel } from '@/app/portfolio/page'

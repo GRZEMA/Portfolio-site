@@ -1,3 +1,5 @@
+'use client'
+
 import AnimatedList from '../ProjectList/AnimatedList'
 import SectionHeading from '../UI/SectionHeading'
 import TextWithSquares from '../UI/TextWithSquares'
