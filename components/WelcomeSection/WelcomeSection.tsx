@@ -14,6 +14,7 @@ const WelcomeSection = (): JSX.Element => {
 						alt='Image of Dawid Krzemiński'
 						fill
 						loading='eager'
+						priority={true}
 					/>
 				</div>
 				<motion.div
