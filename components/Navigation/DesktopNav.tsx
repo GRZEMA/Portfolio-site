@@ -1,31 +1,50 @@
+import { usePathname } from 'next/navigation'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import Logo from '../Logo/Logo'
 import Link from 'next/link'
-import ProgressBar from './ProgressBar'
 
 interface DesktopNavProps {
 	openNav: () => void
 }
 
 const DesktopNav = ({ openNav }: DesktopNavProps): JSX.Element => {
+	const pathname = usePathname()
+
+	console.log(pathname)
+
 	return (
 		<div className='nav p-6 w-full flex items-center justify-between'>
 			<Logo />
 			<ul className='hidden md:flex gap-8 text-xl'>
-				<li className='hover:text-customYellow transition-colors duration-300'>
+				<li
+					className={`hover:text-customYellow transition-colors duration-300 ${
+						pathname === '/' && 'text-customYellow'
+					}`}>
 					<Link href='/'>Home</Link>
 				</li>
-				<li className='hover:text-customYellow transition-colors duration-300'>
+				<li
+					className={`hover:text-customYellow transition-colors duration-300 ${
+						pathname === '/#about' && 'text-customYellow'
+					}`}>
 					<Link href='/#about'>About</Link>
 				</li>
-				<li className='hover:text-customYellow transition-colors duration-300'>
+				<li
+					className={`hover:text-customYellow transition-colors duration-300 ${
+						pathname === '/portfolio' && 'text-customYellow'
+					}`}>
 					<Link href='/portfolio'>Portfolio</Link>
 				</li>
-				<li className='hover:text-customYellow transition-colors duration-300'>
+				<li
+					className={`hover:text-customYellow transition-colors duration-300 ${
+						pathname === '/services' && 'text-customYellow'
+					}`}>
 					<Link href='/services'>Services</Link>
 				</li>
-				<li className='hover:text-customYellow transition-colors duration-300'>
+				<li
+					className={`hover:text-customYellow transition-colors duration-300 ${
+						pathname === '/contact' && 'text-customYellow'
+					}`}>
 					<Link href='/contact'>Contact</Link>
 				</li>
 			</ul>
