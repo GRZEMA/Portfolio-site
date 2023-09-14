@@ -35,7 +35,7 @@ const PortfolioItem = ({
 				className='flex flex-col items-center text-center h-1/2 pb-4 sm:pb-6 md:pb-7 lg:pb-8 xl:pb-9 2xl:pb-10 2xl:text-4xl xl:text-3xl md:text-2xl text-xl sm:text-2xl pl-4 pr-4 xl:pr-6 xl:pl-6 max-w-prose gap-4 2xl:gap-14 xl:gap-12 lg:gap-10 sm:gap-8'>
 				<h4 className='font-bold mt-4'>{name}</h4>
 				<p>{briefDescription}</p>
-				<Button size='xl' href={`/about/#${id}`}>
+				<Button size='xl' href={`/portfolio/#${id}`}>
 					More Details <FontAwesomeIcon icon={faArrowRight} size='xs' />
 				</Button>
 			</motion.div>
