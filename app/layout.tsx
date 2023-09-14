@@ -43,6 +43,20 @@ export default function RootLayout({
 		<html
 			lang='en'
 			className={`${roboto_condensed.variable} ${dancing_script.variable} ${cormorant_garmond.variable} scroll-smooth`}>
+			<head>
+				<meta charSet='utf-8' />
+				<meta name='viewport' content='width=device-width, initial-scale=1' />
+				<title>Dawid Krzemiński | Frontend Developer and UI/UX Enthusias</title>
+				<meta
+					name='description'
+					content='Welcome to the home of Dawid Krzemiński, a passionate frontend developer known for creating engaging web experiences. Explore my portfolio and services.'
+				/>
+				<link
+					rel='icon'
+					type='image/x-icon'
+					href='/assets/logo-portfolio.png'
+				/>
+			</head>
 			<body className='font-roboto font-extralight max-w-full bg-background'>
 				<Navigation />
 				<NextTopLoader color='#FAE69E' showSpinner={false} />

@@ -11,8 +11,6 @@ interface DesktopNavProps {
 const DesktopNav = ({ openNav }: DesktopNavProps): JSX.Element => {
 	const pathname = usePathname()
 
-	console.log(pathname)
-
 	return (
 		<div className='nav p-6 w-full flex items-center justify-between'>
 			<Logo />
