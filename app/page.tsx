@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
 	return (
-		<main className='pb-5 bg-background lg:pb-10 flex flex-col items-center'>
+		<main className='pb-5 bg-background lg:pb-10 flex flex-col items-center text-text'>
 			<WelcomeSection />
 			<AboutSection />
 			<PortfolioSection />

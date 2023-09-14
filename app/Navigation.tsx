@@ -17,7 +17,7 @@ const Navigation = (): JSX.Element => {
 	}
 
 	return (
-		<nav className='bg-background fixed top-0 w-full z-50'>
+		<nav className='bg-background fixed top-0 w-full z-50 text-text'>
 			<div className='container'>
 				<DesktopNav openNav={openNav} />
 			</div>

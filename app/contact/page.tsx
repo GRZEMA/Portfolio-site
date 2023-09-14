@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const ContactPage = () => {
 	return (
-		<main className='pb-5 bg-background lg:pb-10'>
+		<main className='pb-5 bg-background lg:pb-10 text-text'>
 			<HeroSection
 				linkId='get-in-touch'
 				title='Contact Me'

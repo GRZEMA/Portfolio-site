@@ -57,7 +57,7 @@ const projects: ProjectModel[] = [
 
 const PortfolioPage = (): JSX.Element => {
 	return (
-		<main className='pb-5 bg-background lg:pb-10'>
+		<main className='pb-5 bg-background lg:pb-10 text-text'>
 			<HeroSection
 				title='Portoflio'
 				imageUrl='/assets/portfolioBg.jpg'

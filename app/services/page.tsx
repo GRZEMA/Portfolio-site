@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const ServicesPage = () => {
 	return (
-		<main className='pb-5 bg-background lg:pb-10'>
+		<main className='pb-5 bg-background lg:pb-10 text-text'>
 			<HeroSection
 				title='Services'
 				imageUrl='/assets/servicesBg.png'
