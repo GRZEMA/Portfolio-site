@@ -1,3 +1,7 @@
+'use client'
+
+import ContactFormSection from '@/components/ContactFormSection/ContactFormSection'
+import FindMeThereSection from '@/components/FindMeThereSection/FindMeThereSection'
 import HeroSection from '@/components/HeroSection/HeroSection'
 
 const ContactPage = () => {
@@ -8,6 +12,8 @@ const ContactPage = () => {
 				title='Contact Me'
 				imageUrl='/assets/contactBg.png'
 			/>
+			<ContactFormSection />
+			<FindMeThereSection />
 		</main>
 	)
 }

@@ -22,7 +22,7 @@ const Button = ({
 	}
 	if (size === '2xl') {
 		classes =
-			'font-normal text-2xl sm:text-3xl pt-2 pb-2 pr-4 pl-4 lg:pt-4 lg:pb-4 lg:pr-8 lg:pl-8 xl:text-4xl rounded-xl'
+			'text-2xl sm:text-3xl pt-2 pb-2 pr-4 pl-4 lg:pt-4 lg:pb-4 lg:pr-8 lg:pl-8 xl:text-4xl rounded-xl'
 	}
 
 	if (href) {
@@ -31,7 +31,7 @@ const Button = ({
 				href={href}
 				className={
 					classes +
-					' bg-customYellow max-w-fit text-background w-full xl:justify-self-end before:content-[""] after:content-[""] before:w-[120%] after:w-[120%] before:h-1/2 after:h-1/2 before:absolute after:absolute before:top-0 after:bottom-0 before:bg-[#C6AF60] after:bg-[#C6AF60] before:left-full after:right-full overflow-hidden relative hover:before:-translate-x-full hover:after:translate-x-full before:transition-transform after:transition-transform before:duration-500 after:duration-500 ' +
+					' bg-customYellow max-w-fit text-background w-full xl:justify-self-end before:content-[""] after:content-[""] before:w-[120%] after:w-[120%] before:h-1/2 after:h-1/2 before:absolute after:absolute before:top-0 after:bottom-0 before:bg-[#C6AF60] after:bg-[#C6AF60] before:left-full after:right-full overflow-hidden relative hover:before:-translate-x-full hover:after:translate-x-full before:transition-transform after:transition-transform before:duration-500 after:duration-500 font-normal ' +
 					customClasses
 				}>
 				<span className='z-10 relative'>{children}</span>
@@ -45,7 +45,8 @@ const Button = ({
 				onClick={action}
 				className={
 					classes +
-					' bg-customYellow max-w-fit text-background font-normal w-full xl:justify-self-end before:content-[""] after:content-[""] before:w-full after:w-full before:h-1/2 after:h-1/2 before:absolute after:absolute before:top-0 after:bottom-0 before:bg-[#C6AF60] after:bg-[#C6AF60] before:left-full after:right-full overflow-hidden relative hover:before:-translate-x-full hover:after:translate-x-full before:transition-transform after:transition-transform before:duration-500 after:duration-500 animate-bounce'
+					' bg-customYellow max-w-fit text-background w-full xl:justify-self-end before:content-[""] after:content-[""] before:w-full after:w-full before:h-1/2 after:h-1/2 before:absolute after:absolute before:top-0 after:bottom-0 before:bg-[#C6AF60] after:bg-[#C6AF60] before:left-full after:right-full overflow-hidden relative hover:before:-translate-x-full hover:after:translate-x-full before:transition-transform after:transition-transform before:duration-500 after:duration-500 font-normal ' +
+					customClasses
 				}>
 				<span className='z-10 relative'>{children}</span>
 			</button>
