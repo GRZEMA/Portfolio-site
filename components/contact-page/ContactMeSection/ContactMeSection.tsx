@@ -1,8 +1,8 @@
 'use client'
 
-import AnimatedParagraph from '../UI/AnimatedParagraph'
-import Button from '../UI/Button'
-import TextWithSquares from '../UI/TextWithSquares'
+import AnimatedParagraph from '../../multi-page-components/UI/AnimatedParagraph'
+import Button from '../../multi-page-components/UI/Button'
+import TextWithSquares from '../../multi-page-components/UI/TextWithSquares'
 
 const ContactMeSection = () => {
 	return (

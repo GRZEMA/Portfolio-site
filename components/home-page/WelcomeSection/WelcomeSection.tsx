@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import Button from '../UI/Button'
+import Button from '../../multi-page-components/UI/Button'
 import { motion } from 'framer-motion'
 
 const WelcomeSection = (): JSX.Element => {

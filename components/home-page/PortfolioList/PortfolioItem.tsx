@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Button from '../UI/Button'
+import Button from '../../multi-page-components/UI/Button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { motion } from 'framer-motion'

@@ -1,6 +1,6 @@
 'use client'
 
-import Button from '@/components/UI/Button'
+import Button from '@/components/multi-page-components/UI/Button'
 
 const Error = (): JSX.Element => {
 	return (

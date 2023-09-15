@@ -5,7 +5,7 @@ import {
 	Dancing_Script,
 } from 'next/font/google'
 import Navigation from './Navigation'
-import Footer from '@/components/Footer/Footer'
+import Footer from '@/components/multi-page-components/Footer/Footer'
 import NextTopLoader from 'nextjs-toploader'
 import { Metadata } from 'next'
 

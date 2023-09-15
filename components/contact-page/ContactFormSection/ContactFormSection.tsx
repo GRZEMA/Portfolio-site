@@ -1,8 +1,8 @@
 'use client'
 
-import { useRef } from 'react'
-import Button from '../UI/Button'
-import SectionHeading from '../UI/SectionHeading'
+import { FormEvent, useRef } from 'react'
+import Button from '../../multi-page-components/UI/Button'
+import SectionHeading from '../../multi-page-components/UI/SectionHeading'
 import { motion } from 'framer-motion'
 
 const ContactFormSection = (): JSX.Element => {
@@ -10,6 +10,8 @@ const ContactFormSection = (): JSX.Element => {
 	const lastNameRef = useRef<HTMLInputElement>(null)
 	const emailRef = useRef<HTMLInputElement>(null)
 	const phoneRef = useRef<HTMLInputElement>(null)
+	const addressRef = useRef<HTMLInputElement>(null)
+	const messageRef = useRef<HTMLTextAreaElement>(null)
 
 	const inputsInWrapper = [
 		{
@@ -35,14 +37,44 @@ const ContactFormSection = (): JSX.Element => {
 	const inputClasses =
 		'p-2 sm:p-3 md:p-[1rem] lg:p-[1.25rem] xl:p-[1.5rem] bg-lightGray font-normal rounded-md w-full'
 
-	const formSubmissionHandler = () => {}
+	const formSubmissionHandler = async (e: FormEvent) => {
+		e.preventDefault()
+		const res = await fetch('/api/send', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({
+				firstName: firstNameRef.current?.value,
+				lastName: lastNameRef.current?.value,
+				email: emailRef.current?.value,
+				phone: phoneRef.current?.value,
+				address: addressRef.current?.value,
+				message: messageRef.current?.value,
+			}),
+		})
+		const data: { error?: string; data?: string } = await res.json()
+
+		if (data.data) {
+			console.log(data.data)
+			firstNameRef.current!.value = ''
+			lastNameRef.current!.value = ''
+			emailRef.current!.value = ''
+			phoneRef.current!.value = ''
+			addressRef.current!.value = ''
+			messageRef.current!.value = ''
+			return
+		} else if (data.error) {
+			console.log(data.error)
+		}
+	}
 
 	return (
 		<section className='flex flex-col w-full pt-6 sm:pt-8 md:pt-10 lg:pt-12 xl:pt-14 2xl:pt-16'>
 			<SectionHeading id='get-in-touch'>Get In Touch</SectionHeading>
 			<div className='container max-w-[1400px] flex flex-col items-center space-y-6 md:space-y-8 lg:space-y-10 px-4 pl-8 pb-6 text-text pt-12 md:pt-20'>
 				<form
-					action=''
+					onSubmit={formSubmissionHandler}
 					className='bg-customGray flex flex-col items-center p-10 sm:p-12 md:p-14 lg:p-16 xl:p-[4.5rem] rounded-lg w-full gap-5 sm:gap-7 md:gap-9 lg:gap-11 xl:gap-13 text-xl sm:text-2xl lg:text-3xl'>
 					<div className='wrapper grid grid-cols-1 md:grid-cols-2 w-full gap-5 sm:gap-7 md:gap-9 lg:gap-11 xl:gap-13'>
 						{inputsInWrapper.map((input) => (
@@ -60,17 +92,16 @@ const ContactFormSection = (): JSX.Element => {
 						type='text'
 						placeholder='Address (optional)'
 						className={inputClasses}
+						ref={addressRef}
 					/>
 					<textarea
 						id='message'
 						placeholder='Type your message here'
+						ref={messageRef}
 						className={
 							'max-w-full h-[150px] md:h-[200px] lg:h-[250px] ' + inputClasses
 						}></textarea>
-					<Button
-						size='2xl'
-						action={formSubmissionHandler}
-						customClasses='!font-bold'>
+					<Button size='2xl' type='submit' customClasses='!font-bold'>
 						Submit
 					</Button>
 				</form>

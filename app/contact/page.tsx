@@ -1,6 +1,6 @@
-import ContactFormSection from '@/components/ContactFormSection/ContactFormSection'
-import FindMeThereSection from '@/components/FindMeThereSection/FindMeThereSection'
-import HeroSection from '@/components/HeroSection/HeroSection'
+import ContactFormSection from '@/components/contact-page/ContactFormSection/ContactFormSection'
+import FindMeThereSection from '@/components/contact-page/FindMeThereSection/FindMeThereSection'
+import HeroSection from '@/components/multi-page-components/HeroSection/HeroSection'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {

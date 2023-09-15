@@ -1,6 +1,6 @@
-import AboutSection from '@/components/AboutSection/AboutSection'
-import WelcomeSection from '@/components/WelcomeSection/WelcomeSection'
-import PortfolioSection from '@/components/PortfolioSection/PortfolioSection'
+import AboutSection from '@/components/home-page/AboutSection/AboutSection'
+import WelcomeSection from '@/components/home-page/WelcomeSection/WelcomeSection'
+import PortfolioSection from '@/components/home-page/PortfolioSection/PortfolioSection'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {

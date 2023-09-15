@@ -1,7 +1,7 @@
 'use client'
 
-import DesktopNav from '@/components/Navigation/DesktopNav'
-import MobileNav from '@/components/Navigation/MobileNav'
+import DesktopNav from '@/components/multi-page-components/Navigation/DesktopNav'
+import MobileNav from '@/components/multi-page-components/Navigation/MobileNav'
 import { AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 

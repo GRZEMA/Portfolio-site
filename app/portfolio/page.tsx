@@ -1,5 +1,5 @@
-import HeroSection from '@/components/HeroSection/HeroSection'
-import ProjectSection from '@/components/ProjectList/ProjectSection'
+import HeroSection from '@/components/multi-page-components/HeroSection/HeroSection'
+import ProjectSection from '@/components/portfolio-page/ProjectList/ProjectSection'
 import { Metadata } from 'next'
 
 export interface ProjectModel {

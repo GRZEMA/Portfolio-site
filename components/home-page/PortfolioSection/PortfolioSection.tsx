@@ -1,7 +1,7 @@
 'use client'
 
 import PortfolioList from '../PortfolioList/PortfolioList'
-import SectionHeading from '../UI/SectionHeading'
+import SectionHeading from '../../multi-page-components/UI/SectionHeading'
 
 const PortfolioSection = (): JSX.Element => {
 	return (

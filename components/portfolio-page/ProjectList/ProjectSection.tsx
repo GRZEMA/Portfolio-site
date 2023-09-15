@@ -1,12 +1,12 @@
 'use client'
 
-import SectionHeading from '../UI/SectionHeading'
-import SectionSubHeading from '../UI/SectionSubHeading'
+import SectionHeading from '../../multi-page-components/UI/SectionHeading'
+import SectionSubHeading from '../../multi-page-components/UI/SectionSubHeading'
 import { ProjectModel } from '@/app/portfolio/page'
 import { motion } from 'framer-motion'
-import TextWithSquares from '../UI/TextWithSquares'
-import Button from '../UI/Button'
-import AnimatedList from './AnimatedList'
+import TextWithSquares from '../../multi-page-components/UI/TextWithSquares'
+import Button from '../../multi-page-components/UI/Button'
+import AnimatedList from '../../multi-page-components/AnimatedList/AnimatedList'
 import ProjectImagesList from './ProjectImagesList'
 
 interface ProjectItemProps {

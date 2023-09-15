@@ -1,8 +1,8 @@
 'use client'
 
-import SectionHeading from '@/components/UI/SectionHeading'
+import SectionHeading from '@/components/multi-page-components/UI/SectionHeading'
 import OfferImagesList from './OfferImagesList'
-import TextWithSquares from '../UI/TextWithSquares'
+import TextWithSquares from '../../multi-page-components/UI/TextWithSquares'
 
 const imagesData = [
 	{

@@ -1,7 +1,7 @@
 'use client'
 
-import AnimatedList from '../ProjectList/AnimatedList'
-import SectionHeading from '../UI/SectionHeading'
+import AnimatedList from '../../multi-page-components/AnimatedList/AnimatedList'
+import SectionHeading from '../../multi-page-components/UI/SectionHeading'
 
 const listItems = [
 	{

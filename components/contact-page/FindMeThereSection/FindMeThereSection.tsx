@@ -1,8 +1,8 @@
 'use client'
 
-import AnimatedList from '../ProjectList/AnimatedList'
-import SectionHeading from '../UI/SectionHeading'
-import TextWithSquares from '../UI/TextWithSquares'
+import AnimatedList from '../../multi-page-components/AnimatedList/AnimatedList'
+import SectionHeading from '../../multi-page-components/UI/SectionHeading'
+import TextWithSquares from '../../multi-page-components/UI/TextWithSquares'
 
 const socials = [
 	{ span: 'Email:', text: 'dawidkrzmnsk@gmail.com', email: true },
