@@ -7,6 +7,7 @@ interface ButtonProps {
 	type?: 'button' | 'submit' | 'reset'
 	size: string
 	customClasses?: string
+	disabled?: boolean
 }
 
 const Button = ({
@@ -16,6 +17,7 @@ const Button = ({
 	action,
 	type,
 	customClasses,
+	disabled,
 }: ButtonProps): JSX.Element => {
 	let classes
 	if (size === 'xl') {
@@ -46,9 +48,10 @@ const Button = ({
 			<button
 				onClick={action ? action : undefined}
 				type={type ? type : undefined}
+				disabled={disabled ? disabled : undefined}
 				className={
 					classes +
-					' bg-customYellow max-w-fit text-background w-full xl:justify-self-end before:content-[""] after:content-[""] before:w-full after:w-full before:h-1/2 after:h-1/2 before:absolute after:absolute before:top-0 after:bottom-0 before:bg-[#C6AF60] after:bg-[#C6AF60] before:left-full after:right-full overflow-hidden relative hover:before:-translate-x-full hover:after:translate-x-full before:transition-transform after:transition-transform before:duration-500 after:duration-500 font-normal ' +
+					' bg-customYellow max-w-fit text-background w-full xl:justify-self-end before:content-[""] after:content-[""] before:w-full after:w-full before:h-1/2 after:h-1/2 before:absolute after:absolute before:top-0 after:bottom-0 before:bg-[#C6AF60] after:bg-[#C6AF60] before:left-full after:right-full overflow-hidden relative hover:before:-translate-x-full hover:after:translate-x-full before:transition-transform after:transition-transform before:duration-500 after:duration-500 font-normal disabled:cursor-not-allowed disabled:bg-lightGray disabled:text-darkGray' +
 					customClasses
 				}>
 				<span className='z-10 relative'>{children}</span>

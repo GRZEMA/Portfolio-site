@@ -1,12 +1,14 @@
 'use client'
 
-import { FormEvent, useRef, useContext } from 'react'
+import { FormEvent, useRef, useContext, useState } from 'react'
 import Button from '../../multi-page-components/UI/Button'
 import SectionHeading from '../../multi-page-components/UI/SectionHeading'
 import { motion } from 'framer-motion'
 import { ModalContext } from '@/app/store/modal-context'
 
 const ContactFormSection = (): JSX.Element => {
+	const [isLoading, setIsLoading] = useState(false)
+
 	const firstNameRef = useRef<HTMLInputElement>(null)
 	const lastNameRef = useRef<HTMLInputElement>(null)
 	const emailRef = useRef<HTMLInputElement>(null)
@@ -42,6 +44,7 @@ const ContactFormSection = (): JSX.Element => {
 
 	const formSubmissionHandler = async (e: FormEvent) => {
 		e.preventDefault()
+		setIsLoading(true)
 		const res = await fetch('/api/send', {
 			method: 'POST',
 			headers: {
@@ -59,6 +62,7 @@ const ContactFormSection = (): JSX.Element => {
 		const data: { error?: string; data?: string } = await res.json()
 
 		if (data.data) {
+			setIsLoading(false)
 			modalCtx.openModal(
 				'Succesfully sent your email to Dawid Krzemiński!',
 				'success'
@@ -71,6 +75,7 @@ const ContactFormSection = (): JSX.Element => {
 			messageRef.current!.value = ''
 			return
 		} else if (data.error) {
+			setIsLoading(false)
 			modalCtx.openModal(data.error, 'error')
 		}
 	}
@@ -119,8 +124,12 @@ const ContactFormSection = (): JSX.Element => {
 						className={
 							'max-w-full h-[150px] md:h-[200px] lg:h-[250px] ' + inputClasses
 						}></motion.textarea>
-					<Button size='2xl' type='submit' customClasses='!font-bold'>
-						Submit
+					<Button
+						size='2xl'
+						type='submit'
+						customClasses='!font-bold'
+						disabled={isLoading}>
+						{isLoading ? 'Sending...' : 'Submit'}
 					</Button>
 				</motion.form>
 			</div>
