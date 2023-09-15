@@ -2,6 +2,7 @@ interface EmailTemplateProps {
 	message: string
 	address?: string
 	phone?: number
+	email: string
 	firstName: string
 	lastName: string
 }
@@ -12,10 +13,11 @@ export const EmailTemplate = ({
 	phone,
 	firstName,
 	lastName,
+	email,
 }: EmailTemplateProps): JSX.Element => (
 	<div>
 		<p>
-			{firstName} {lastName} is texting:{' '}
+			{firstName} {lastName}, &lt;{email}&gt; is texting:{' '}
 		</p>
 		<p>Message: {message}</p>
 		{address ? <p>Address: {address}</p> : undefined}

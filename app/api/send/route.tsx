@@ -26,6 +26,7 @@ export const POST = async (req: Request) => {
 				phone: phone ? phone : undefined,
 				address: address ? address : undefined,
 				message,
+				email,
 			}),
 		})
 		return NextResponse.json({ data: 'Your mail was succesfully sent!' })
