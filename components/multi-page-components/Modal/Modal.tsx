@@ -1,3 +1,5 @@
+'use client'
+
 import { ModalContext } from '@/app/store/modal-context'
 import { useContext } from 'react'
 import { motion } from 'framer-motion'
