@@ -1,9 +1,10 @@
 'use client'
 
-import { FormEvent, useRef } from 'react'
+import { FormEvent, useRef, useContext } from 'react'
 import Button from '../../multi-page-components/UI/Button'
 import SectionHeading from '../../multi-page-components/UI/SectionHeading'
 import { motion } from 'framer-motion'
+import { ModalContext } from '@/app/store/modal-context'
 
 const ContactFormSection = (): JSX.Element => {
 	const firstNameRef = useRef<HTMLInputElement>(null)
@@ -12,6 +13,8 @@ const ContactFormSection = (): JSX.Element => {
 	const phoneRef = useRef<HTMLInputElement>(null)
 	const addressRef = useRef<HTMLInputElement>(null)
 	const messageRef = useRef<HTMLTextAreaElement>(null)
+
+	const modalCtx = useContext(ModalContext)
 
 	const inputsInWrapper = [
 		{
@@ -56,7 +59,10 @@ const ContactFormSection = (): JSX.Element => {
 		const data: { error?: string; data?: string } = await res.json()
 
 		if (data.data) {
-			console.log(data.data)
+			modalCtx.openModal(
+				'Succesfully sent your email to Dawid Krzemiński!',
+				'success'
+			)
 			firstNameRef.current!.value = ''
 			lastNameRef.current!.value = ''
 			emailRef.current!.value = ''
@@ -65,7 +71,7 @@ const ContactFormSection = (): JSX.Element => {
 			messageRef.current!.value = ''
 			return
 		} else if (data.error) {
-			console.log(data.error)
+			modalCtx.openModal(data.error, 'error')
 		}
 	}
 
@@ -73,12 +79,18 @@ const ContactFormSection = (): JSX.Element => {
 		<section className='flex flex-col w-full pt-6 sm:pt-8 md:pt-10 lg:pt-12 xl:pt-14 2xl:pt-16'>
 			<SectionHeading id='get-in-touch'>Get In Touch</SectionHeading>
 			<div className='container max-w-[1400px] flex flex-col items-center space-y-6 md:space-y-8 lg:space-y-10 px-4 pl-8 pb-6 text-text pt-12 md:pt-20'>
-				<form
+				<motion.form
+					initial={{ opacity: 0, x: -200 }}
+					whileInView={{ opacity: 1, x: 0 }}
+					viewport={{ once: true }}
 					onSubmit={formSubmissionHandler}
 					className='bg-customGray flex flex-col items-center p-10 sm:p-12 md:p-14 lg:p-16 xl:p-[4.5rem] rounded-lg w-full gap-5 sm:gap-7 md:gap-9 lg:gap-11 xl:gap-13 text-xl sm:text-2xl lg:text-3xl'>
 					<div className='wrapper grid grid-cols-1 md:grid-cols-2 w-full gap-5 sm:gap-7 md:gap-9 lg:gap-11 xl:gap-13'>
 						{inputsInWrapper.map((input) => (
-							<input
+							<motion.input
+								initial={{ opacity: 0, x: -200 }}
+								whileInView={{ opacity: 1, x: 0 }}
+								viewport={{ once: true }}
 								key={input.id}
 								type={input.type}
 								placeholder={input.placeholder}
@@ -88,23 +100,29 @@ const ContactFormSection = (): JSX.Element => {
 							/>
 						))}
 					</div>
-					<input
+					<motion.input
+						initial={{ opacity: 0, x: -200 }}
+						whileInView={{ opacity: 1, x: 0 }}
+						viewport={{ once: true }}
 						type='text'
 						placeholder='Address (optional)'
 						className={inputClasses}
 						ref={addressRef}
 					/>
-					<textarea
+					<motion.textarea
+						initial={{ opacity: 0, x: -200 }}
+						whileInView={{ opacity: 1, x: 0 }}
+						viewport={{ once: true }}
 						id='message'
 						placeholder='Type your message here'
 						ref={messageRef}
 						className={
 							'max-w-full h-[150px] md:h-[200px] lg:h-[250px] ' + inputClasses
-						}></textarea>
+						}></motion.textarea>
 					<Button size='2xl' type='submit' customClasses='!font-bold'>
 						Submit
 					</Button>
-				</form>
+				</motion.form>
 			</div>
 		</section>
 	)

@@ -8,6 +8,7 @@ import Navigation from './Navigation'
 import Footer from '@/components/multi-page-components/Footer/Footer'
 import NextTopLoader from 'nextjs-toploader'
 import { Metadata } from 'next'
+import ModalContextProvider from './store/modal-context'
 
 const roboto_condensed = Roboto_Condensed({
 	subsets: ['latin'],
@@ -45,12 +46,14 @@ export default function RootLayout({
 		<html
 			lang='en'
 			className={`${roboto_condensed.variable} ${dancing_script.variable} ${cormorant_garmond.variable} scroll-smooth`}>
-			<body className='font-roboto font-extralight max-w-full bg-background'>
-				<Navigation />
-				<NextTopLoader color='#FAE69E' showSpinner={false} />
-				{children}
-				<Footer />
-			</body>
+			<ModalContextProvider>
+				<body className='font-roboto font-extralight max-w-full bg-background'>
+					<Navigation />
+					<NextTopLoader color='#FAE69E' showSpinner={false} />
+					{children}
+					<Footer />
+				</body>
+			</ModalContextProvider>
 		</html>
 	)
 }
