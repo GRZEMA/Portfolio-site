@@ -1,5 +1,3 @@
-'use client'
-
 import ContactFormSection from '@/components/contact-page/ContactFormSection/ContactFormSection'
 import FindMeThereSection from '@/components/contact-page/FindMeThereSection/FindMeThereSection'
 import HeroSection from '@/components/multi-page-components/HeroSection/HeroSection'
