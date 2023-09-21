@@ -9,8 +9,8 @@ export interface ProjectModel {
 	stackList: { text: string }[]
 	liveUrl: string
 	githubUrl: string
-	imagesUrl: string[]
 	id: string
+	images: { url: string; title: string }[]
 }
 
 export const metadata: Metadata = {
@@ -41,16 +41,43 @@ const projects: ProjectModel[] = [
 		],
 		liveUrl: 'https://meet-yaa-project.vercel.app/',
 		githubUrl: 'https://github.com/GRZEMA/meetYaa-project',
-		imagesUrl: [
-			'/assets/meetYaa/image1.png',
-			'/assets/meetYaa/image2.png',
-			'/assets/meetYaa/image3.png',
-			'/assets/meetYaa/image4.png',
-			'/assets/meetYaa/image5.png',
-			'/assets/meetYaa/image6.png',
-			'/assets/meetYaa/image7.png',
-			'/assets/meetYaa/image8.png',
-			'/assets/meetYaa/image9.png',
+		images: [
+			{
+				url: '/assets/meetYaa/image1.png',
+				title: 'Home Page',
+			},
+			{
+				url: '/assets/meetYaa/image2.png',
+				title: 'Featured Events',
+			},
+			{
+				url: '/assets/meetYaa/image3.png',
+				title: 'All Events Page',
+			},
+			{
+				url: '/assets/meetYaa/image4.png',
+				title: 'All Events Filtered',
+			},
+			{
+				url: '/assets/meetYaa/image5.png',
+				title: 'Login Page',
+			},
+			{
+				url: '/assets/meetYaa/image6.png',
+				title: 'Single Event Page',
+			},
+			{
+				url: '/assets/meetYaa/image7.png',
+				title: 'Event Creation Page',
+			},
+			{
+				url: '/assets/meetYaa/image8.png',
+				title: 'User Profile Page',
+			},
+			{
+				url: '/assets/meetYaa/image9.png',
+				title: 'Event Management Modal',
+			},
 		],
 	},
 ]
