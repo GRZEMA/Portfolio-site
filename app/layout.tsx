@@ -9,6 +9,7 @@ import Footer from '@/components/multi-page-components/Footer/Footer'
 import NextTopLoader from 'nextjs-toploader'
 import { Metadata } from 'next'
 import ModalContextProvider from './store/modal-context'
+import { Analytics } from '@vercel/analytics/react'
 
 const roboto_condensed = Roboto_Condensed({
 	subsets: ['latin'],
@@ -52,6 +53,7 @@ export default function RootLayout({
 					<NextTopLoader color='#FAE69E' showSpinner={false} />
 					{children}
 					<Footer />
+					<Analytics />
 				</body>
 			</ModalContextProvider>
 		</html>
